@@ -2,13 +2,28 @@
  * Ajax Post method
  */
 
+$(function ajaxPost(){
+
 //JSON Format
 var toSer = {  //Data that need to be send to server
   "venue": venue, 
   "startDate": newStartdate, 
   "endDate": newEnddate
   }
-		  
+
+//Declare loading div (id) to variable loading
+var loading = $("#loading"); 
+
+//Display the loading div when when ajax started
+$(document).ajaxStart(function () {
+    loading.show(); 
+});
+
+//Hide the loading div when when ajax result received
+$(document).ajaxStop(function () {
+    loading.hide(); 
+});	  
+
 $.ajax({
   type: "Post", //Method Used
   
@@ -25,4 +40,5 @@ $.ajax({
   error:function(textStatus, errorThrown) {
     console.log(textStatus);//Display error in console log
   }
+});
 });
