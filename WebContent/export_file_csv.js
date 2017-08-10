@@ -21,10 +21,10 @@ $(document).ready(function(){
         
 		success:function(data) {
 		    window.location = 'getexportreportAPI.tss?venue='+venue+'&startDate='+newStartdate+'&endDate='+newEnddate;
-            //Start downloading the .csv
+             //Start downloading the .csv
 		},
 		error:function(textStatus, errorThrown) {
-		    console.log(textStatus); //Display error in console log
+		    console.log(textStatus);  //Display error in console log
 		}
 		});
 	});
