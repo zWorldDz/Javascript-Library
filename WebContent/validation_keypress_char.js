@@ -7,4 +7,3 @@ $(document).ready(function(){
             }
     });
 });
-	          <label for="roundedTwo"></label>
